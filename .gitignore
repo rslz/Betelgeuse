@@ -1,0 +1,19 @@
+NoWait/NoWait.xcworkspace/xcuserdata/
+NoWait/NoWait.xcodeproj/xcuserdata/
+NoWait/NoWait.xcodeproj/project.xcworkspace/xcshareddata/
+NoWait/NoWait.xcodeproj/project.xcworkspace/xcuserdata/
+NoWait/NoWait.xcworkspace/.LSOverride
+NoWait/build/
+NoWait/output/
+NoWait/xcodebuild.log
+NoWait/config.cfg
+NoWait/ipa_generator.sh
+.DS_Store
+NoWait/.DS_Store
+
+#CocoaPods
+Pods
+Podfile.lock
+
+# Flutter
+.dart_tool/
