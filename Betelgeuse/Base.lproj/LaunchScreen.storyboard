@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_lunch_top" translatesAutoresizingMaskIntoConstraints="NO" id="BHa-ic-Ki0">
+                                <rect key="frame" x="112.33333333333333" y="773" width="168.33333333333337" height="30"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_lunch_bird" translatesAutoresizingMaskIntoConstraints="NO" id="udg-YF-AVf">
+                                <rect key="frame" x="12" y="353.66666666666669" width="369.33333333333331" height="170.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="H6E-9C-PSh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wecome to Sleep" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zi2-00-8hi">
+                                <rect key="frame" x="87.333333333333329" y="159" width="218.33333333333337" height="32.333333333333343"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.032033316790000002" green="0.093665383759999998" blue="0.28618276120000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="zi2-00-8hi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="7iq-WS-U3J"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BHa-ic-Ki0" secondAttribute="bottom" constant="15" id="8l7-zv-mLZ"/>
+                            <constraint firstItem="BHa-ic-Ki0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ABk-dW-3MP"/>
+                            <constraint firstItem="zi2-00-8hi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FlW-bN-BQv"/>
+                            <constraint firstItem="udg-YF-AVf" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="H1n-A0-X6n"/>
+                            <constraint firstItem="udg-YF-AVf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eFI-aG-juQ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.671755725190835" y="374.64788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_lunch_bird" width="369.33334350585938" height="229.33332824707031"/>
+        <image name="icon_lunch_top" width="168.33332824707031" height="30"/>
+    </resources>
+</document>
