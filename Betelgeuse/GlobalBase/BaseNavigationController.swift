@@ -14,13 +14,21 @@ class BaseNavigationController: UINavigationController {
 
         Be_setNavColor(UIColor.label, UIColor.systemBackground, false) // 白底黑字
         
-
-        
-        let tmpImage = UIImage(systemName: "arrow.backward")
-        UINavigationBar.appearance().backIndicatorImage = tmpImage
-        UINavigationBar.appearance().backIndicatorTransitionMaskImage = tmpImage
-        UINavigationBar.appearance().isTranslucent = false
-        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -1000,vertical: 0), for: .default)
+    }
+    
+    /// 重写push方法的目的 : 拦截所有push进来的子控制器
+    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        if (self.children.count > 0 ) {
+            let backItem = UIBarButtonItem.Jh_backItem(imageName: "arrow.backward", target: self, action: #selector(ClickBackBtn))
+            viewController.navigationItem.leftBarButtonItem = backItem
+            // 隐藏底部的工具条
+            viewController.hidesBottomBarWhenPushed = true
+        }
+        // 所有设置搞定后, 再push控制器
+        super.pushViewController(viewController, animated: animated)
+    }
+    @objc func ClickBackBtn() {
+        self.popViewController(animated: true)
     }
     
 
@@ -59,6 +67,28 @@ func Be_setNavColor(_ titleColor:UIColor,_ navBgColor:UIColor,_ isTransparent:Bo
             appearance.backgroundEffect = nil; // 不使用毛玻璃效果
             appearance.shadowColor = nil; // 隐藏底部分隔线
         }
+        // standardAppearance：常规状态, 标准外观，iOS15之后不设置的时候，导航栏背景透明
+        UINavigationBar.appearance().standardAppearance = appearance
+        // scrollEdgeAppearance：被scrollview向下拉的状态, 滚动时外观，不设置的时候，使用标准外观
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+    }
+}
+
+// MARK: - 设置半透明毛玻璃导航条（白底黑字）
+func Jh_setHalfTransparentNav() {
+    // 设置标题字体颜色
+    var titleTextAttributes = Dictionary<NSAttributedString.Key,Any>()
+    titleTextAttributes[NSAttributedString.Key.font] = UIFont.systemFont(ofSize: 18)
+    titleTextAttributes[NSAttributedString.Key.foregroundColor] = UIColor.black
+    UINavigationBar.appearance().titleTextAttributes = titleTextAttributes
+    if #available(iOS 15.0, *) {
+        let appearance = UINavigationBarAppearance()
+        
+        appearance.configureWithDefaultBackground(); //使用默认背景和阴影值配置条形外观对象。
+        //        appearance.configureWithTransparentBackground(); //配置具有透明背景且无阴影的条形外观对象。
+        //        appearance.configureWithOpaqueBackground(); //使用一组适合当前主题的不透明颜色配置栏外观对象。
+        
+        appearance.titleTextAttributes = titleTextAttributes;
         // standardAppearance：常规状态, 标准外观，iOS15之后不设置的时候，导航栏背景透明
         UINavigationBar.appearance().standardAppearance = appearance
         // scrollEdgeAppearance：被scrollview向下拉的状态, 滚动时外观，不设置的时候，使用标准外观

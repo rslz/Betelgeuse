@@ -12,6 +12,9 @@ class BaseTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tabBar.isTranslucent = false;
+        tabBar.backgroundColor = UIColor.systemBackground
+        
         let tabBarItem = UITabBarItem.appearance()
         
         // 普通状态下的文字属性
@@ -46,7 +49,7 @@ class BaseTabBarController: UITabBarController {
     
     func addChildViewController(_ childController: UIViewController, title:String?, image:UIImage?, selectedImage:UIImage?) {
         childController.tabBarItem = UITabBarItem(title: title, image: image?.withRenderingMode(.alwaysOriginal), selectedImage: selectedImage?.withRenderingMode(.alwaysOriginal))
-        let navController = UINavigationController(rootViewController: childController)
+        let navController = BaseNavigationController(rootViewController: childController)
         addChild(navController)
     }
     

@@ -1,18 +1,17 @@
 //
-//  BaseViewController.swift
+//  TestViewController.swift
 //  Betelgeuse
 //
-//  Created by mv_rslz on 2023/11/8.
+//  Created by mv_rslz on 2023/11/9.
 //
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class TestViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor.systemGray2
         // Do any additional setup after loading the view.
     }
     

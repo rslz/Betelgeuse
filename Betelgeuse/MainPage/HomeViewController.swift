@@ -6,7 +6,8 @@
 //
 
 import UIKit
-//import SnapKit
+import Alamofire
+import SnapKit
 
 class HomeViewController: BaseViewController {
 
@@ -26,18 +27,18 @@ class HomeViewController: BaseViewController {
     }
     
     func setupUI() {
-
-//        addressButton.addTarget(self, action: #selector(addressButtonClick(sender:)), for: .touchUpInside)
-//        view.addSubview(addressButton)
-//        addressButton.snp.makeConstraints {
-//            $0.center.equalTo(self.view.snp.center)
-//            $0.height.width.equalTo(50)
-//        }
+        addressButton.addTarget(self, action: #selector(addressButtonClick(sender:)), for: .touchUpInside)
+        view.addSubview(addressButton)
+        addressButton.snp.makeConstraints {
+            $0.center.equalTo(self.view.snp.center)
+            $0.height.width.equalTo(150)
+        }
 
     }
     
     @objc func addressButtonClick(sender: UIButton) {
-        
+        let testVC = TestViewController()
+        navigationController?.pushViewController(testVC, animated: true)
     }
 
     
