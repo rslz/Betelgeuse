@@ -17,6 +17,8 @@
 		2B2AB7F52AFCC62000E6155F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2B2AB7F42AFCC62000E6155F /* SnapKit */; };
 		2B2AB7F72AFCC7F700E6155F /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2AB7F62AFCC7F700E6155F /* TestViewController.swift */; };
 		2B2AB7FB2AFCCD7500E6155F /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2AB7FA2AFCCD7500E6155F /* UIBarButtonItem+Extension.swift */; };
+		2B2AB7FE2AFCD99100E6155F /* ViewAnimator in Frameworks */ = {isa = PBXBuildFile; productRef = 2B2AB7FD2AFCD99100E6155F /* ViewAnimator */; };
+		2B2AB8002AFCD9FC00E6155F /* TestAnimatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2AB7FF2AFCD9FC00E6155F /* TestAnimatorViewController.swift */; };
 		2BC2D0012A822EEA00CA1463 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2D0002A822EEA00CA1463 /* AppDelegate.swift */; };
 		2BC2D0032A822EEA00CA1463 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2D0022A822EEA00CA1463 /* SceneDelegate.swift */; };
 		2BC2D0052A822EEA00CA1463 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2D0042A822EEA00CA1463 /* ViewController.swift */; };
@@ -56,6 +58,7 @@
 		2B2AB7EF2AFB88E800E6155F /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		2B2AB7F62AFCC7F700E6155F /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		2B2AB7FA2AFCCD7500E6155F /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		2B2AB7FF2AFCD9FC00E6155F /* TestAnimatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAnimatorViewController.swift; sourceTree = "<group>"; };
 		2BC2CFFD2A822EEA00CA1463 /* Betelgeuse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Betelgeuse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC2D0002A822EEA00CA1463 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BC2D0022A822EEA00CA1463 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +81,7 @@
 			files = (
 				2BC32EEB2A8DB7F30039E4C5 /* Alamofire in Frameworks */,
 				2B2AB7F52AFCC62000E6155F /* SnapKit in Frameworks */,
+				2B2AB7FE2AFCD99100E6155F /* ViewAnimator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +190,7 @@
 				2B2AB7EB2AFB79B300E6155F /* CartViewController.swift */,
 				2B2AB7ED2AFB79C600E6155F /* MineViewController.swift */,
 				2B2AB7F62AFCC7F700E6155F /* TestViewController.swift */,
+				2B2AB7FF2AFCD9FC00E6155F /* TestAnimatorViewController.swift */,
 			);
 			path = MainPage;
 			sourceTree = "<group>";
@@ -209,6 +214,7 @@
 			packageProductDependencies = (
 				2BC32EEA2A8DB7F30039E4C5 /* Alamofire */,
 				2B2AB7F42AFCC62000E6155F /* SnapKit */,
+				2B2AB7FD2AFCD99100E6155F /* ViewAnimator */,
 			);
 			productName = Betelgeuse;
 			productReference = 2BC2CFFD2A822EEA00CA1463 /* Betelgeuse.app */;
@@ -285,6 +291,7 @@
 			packageReferences = (
 				2BC32EE92A8DB7F30039E4C5 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				2B2AB7F32AFCC62000E6155F /* XCRemoteSwiftPackageReference "SnapKit" */,
+				2B2AB7FC2AFCD99100E6155F /* XCRemoteSwiftPackageReference "ViewAnimator" */,
 			);
 			productRefGroup = 2BC2CFFE2A822EEA00CA1463 /* Products */;
 			projectDirPath = "";
@@ -339,6 +346,7 @@
 				2B2AB7EC2AFB79B300E6155F /* CartViewController.swift in Sources */,
 				2BC2D0012A822EEA00CA1463 /* AppDelegate.swift in Sources */,
 				2BC2D0032A822EEA00CA1463 /* SceneDelegate.swift in Sources */,
+				2B2AB8002AFCD9FC00E6155F /* TestAnimatorViewController.swift in Sources */,
 				2B2AB7F02AFB88E800E6155F /* BaseNavigationController.swift in Sources */,
 				2B2AB7E82AFB798000E6155F /* HomeViewController.swift in Sources */,
 			);
@@ -696,6 +704,14 @@
 				minimumVersion = 5.6.0;
 			};
 		};
+		2B2AB7FC2AFCD99100E6155F /* XCRemoteSwiftPackageReference "ViewAnimator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marcosgriselli/ViewAnimator.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.0;
+			};
+		};
 		2BC32EE92A8DB7F30039E4C5 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -711,6 +727,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2B2AB7F32AFCC62000E6155F /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		2B2AB7FD2AFCD99100E6155F /* ViewAnimator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B2AB7FC2AFCD99100E6155F /* XCRemoteSwiftPackageReference "ViewAnimator" */;
+			productName = ViewAnimator;
 		};
 		2BC32EEA2A8DB7F30039E4C5 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
