@@ -10,6 +10,8 @@ import SnapKit
 
 class LikeViewController: BaseViewController {
 
+    let stackView = UIStackView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,7 +22,6 @@ class LikeViewController: BaseViewController {
     
     func setupUI() {
 
-        let stackView = UIStackView()
         view.addSubview(stackView)
         stackView.snp.makeConstraints {
             $0.left.top.right.equalTo(self.view)
@@ -45,6 +46,20 @@ class LikeViewController: BaseViewController {
         stackView.addArrangedSubview(subview3)
 
     }
+    
+    func addButtonPressed() {
+        let subview4 = UIView()
+        subview4.backgroundColor = .yellow
+        stackView.addArrangedSubview(subview4)
+    }
+
+    func deleteButtonPressed() {
+      let lastSubview = stackView.arrangedSubviews.last
+      if let lastSubview = lastSubview {
+        stackView.removeArrangedSubview(lastSubview)
+      }
+    }
+    
 
     /*
     // MARK: - Navigation
