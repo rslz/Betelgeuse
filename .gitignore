@@ -1,15 +1,15 @@
-NoWait/NoWait.xcworkspace/xcuserdata/
-NoWait/NoWait.xcodeproj/xcuserdata/
-NoWait/NoWait.xcodeproj/project.xcworkspace/xcshareddata/
-NoWait/NoWait.xcodeproj/project.xcworkspace/xcuserdata/
-NoWait/NoWait.xcworkspace/.LSOverride
-NoWait/build/
-NoWait/output/
-NoWait/xcodebuild.log
-NoWait/config.cfg
-NoWait/ipa_generator.sh
+Betelgeuse.xcworkspace/xcuserdata/
+Betelgeuse.xcodeproj/xcuserdata/
+Betelgeuse.xcodeproj/project.xcworkspace/xcshareddata/
+Betelgeuse.xcodeproj/project.xcworkspace/xcuserdata/
+Betelgeuse.xcworkspace/.LSOverride
+Betelgeuse/build/
+Betelgeuse/output/
+Betelgeuse/xcodebuild.log
+Betelgeuse/config.cfg
+Betelgeuse/ipa_generator.sh
 .DS_Store
-NoWait/.DS_Store
+Betelgeuse/.DS_Store
 
 #CocoaPods
 Pods
